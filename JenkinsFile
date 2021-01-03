@@ -33,6 +33,7 @@ pipeline {
 
 		stage('Run stage'){
 			steps {
+		sh 'chmod 777 target'
 		sh 'cd target'
 		sh 'jar -xf project-1.0-SNAPSHOT.jar'
 		sh "echo 'Main-Class: App\n' >> /META-INF/MANIFEST.MF"
