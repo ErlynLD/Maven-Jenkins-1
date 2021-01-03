@@ -38,6 +38,7 @@ pipeline {
 			sh 'ls target -l'
 			sh 'chmod 777 target/project-1.0-SNAPSHOT.jar'
 			sh 'ls target/ -l'
+			sh "jar -xf target/project-1.0-SNAPSHOT.jar"
 			}
 		}
 	}
