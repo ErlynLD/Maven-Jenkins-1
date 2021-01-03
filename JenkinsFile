@@ -30,5 +30,12 @@ pipeline {
 				sh 'mvn install'
 			}
 		}
+
+		stage('Run stage'){
+			steps {
+				sh 'pwd'
+			
+			}
+		}
 	}
 }
