@@ -40,7 +40,7 @@ pipeline {
 			sh 'ls target/ -l'
 			sh "jar -xf target/project-1.0-SNAPSHOT.jar"
 		sh "echo 'Main-Class: App\n' >> META-INF/MANIFEST.MF"
-		sh 'java --version'
+		sh 'java -cfm erlyn.jar META-INF/MANIFEST.MF App.class'
 			}
 		}
 	}
