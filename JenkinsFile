@@ -34,7 +34,7 @@ pipeline {
 		stage('Run stage'){
 			steps {
 				sh 'chmod 777 target'
-				sh 'cd target'
+				cd target
 				sh "ls"
 			}
 		}
