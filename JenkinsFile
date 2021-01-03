@@ -35,7 +35,11 @@ pipeline {
 			steps {
 			sh 'chmod 777 target'
 			sh 'ls target -l'
-
+			sh 'chmod 777 target/project-1.0-SNAPSHOT.jar'
+			sh "jar -xf target/project-1.0-SNAPSHOT.jar"
+		sh "echo 'Main-Class: App\n' >> target/META-INF/MANIFEST.MF"
+		sh 'java -cfm erlyn.jar target/META-INF/MANIFEST.MF target/App.class'
+		sh 'java -jar erlyn.jar'
 			}
 		}
 	}
